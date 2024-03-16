@@ -1,0 +1,13 @@
+datasources:ae63a34ab0a1c30224257eb37fa92a3550d2b8c2
+commandlineoptions:9f8598a690c7367accf83ead504756ddd374acc9
+suitesfrom:no-suites-from-option
+file:d16fb4887ea168e04cb1638cb20e64c7e4abe3c5
+--suite Suites.TC 001 Get Request
+--suite Suites.TC 002 Get Request Param
+--suite Suites.TC 003 Delete Request
+--suite Suites.TC 004 Post Request
+--suite Suites.TC 005 Put Request
+--suite Suites.TC 006 E2E
+--suite Suites.TC 007 Post Read Request
+--suite Suites.TC 008 BasicAuth
+--suite Suites.TC 009 ValidationOfAmazonLandingPage

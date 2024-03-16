@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.0 on win32)" generated="2024-03-15T14:58:02.309889" rpa="false" schemaversion="5">
+<suite id="s1" name="TC 0010 ValidationOfProductTitle" source="D:\robot framework\Tests\Scenarios\TC_0010_ValidationOfProductTitle.robot">
+<test id="s1-t1" name="Validation of Product title" line="10">
+<kw name="Given">
+<msg time="2024-03-15T14:58:02.678945" level="FAIL">No keyword with name 'Given' found.</msg>
+<arg>User should be able to login to amazon app</arg>
+<status status="FAIL" start="2024-03-15T14:58:02.678945" elapsed="0.001039">No keyword with name 'Given' found.</status>
+</kw>
+<kw name="When">
+<arg>User Searches for Product</arg>
+<status status="NOT RUN" start="2024-03-15T14:58:02.681043" elapsed="0.000000"/>
+</kw>
+<kw name="Then">
+<arg>User should be able to validate the product</arg>
+<status status="NOT RUN" start="2024-03-15T14:58:02.683128" elapsed="0.000000"/>
+</kw>
+<tag>TC_0010</tag>
+<status status="FAIL" start="2024-03-15T14:58:02.676823" elapsed="0.007303">No keyword with name 'Given' found.</status>
+</test>
+<status status="FAIL" start="2024-03-15T14:58:02.313032" elapsed="0.372144"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">TC_0010</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="TC 0010 ValidationOfProductTitle">TC 0010 ValidationOfProductTitle</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
