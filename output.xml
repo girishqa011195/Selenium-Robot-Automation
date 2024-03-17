@@ -1,34 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.0 on win32)" generated="2024-03-15T14:58:02.309889" rpa="false" schemaversion="5">
-<suite id="s1" name="TC 0010 ValidationOfProductTitle" source="D:\robot framework\Tests\Scenarios\TC_0010_ValidationOfProductTitle.robot">
-<test id="s1-t1" name="Validation of Product title" line="10">
-<kw name="Given">
-<msg time="2024-03-15T14:58:02.678945" level="FAIL">No keyword with name 'Given' found.</msg>
-<arg>User should be able to login to amazon app</arg>
-<status status="FAIL" start="2024-03-15T14:58:02.678945" elapsed="0.001039">No keyword with name 'Given' found.</status>
+<robot generator="Robot 7.0 (Python 3.12.0 on win32)" generated="2024-03-17T11:04:55.353731" rpa="false" schemaversion="5">
+<suite id="s1" name="TC 009 ValidationOfAmazonLandingPage" source="D:\robot framework\Tests\Scenarios\TC_009_ValidationOfAmazonLandingPage.robot">
+<test id="s1-t1" name="Validation of amazon landing page" line="6">
+<kw name="Given User logs into amazon as end user" owner="SupportSteps_LandingPage">
+<kw name="end user launches the browser" owner="LandingPage">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-17T11:04:56.575465" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.in/'.</msg>
+<arg>${amazon_url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-17T11:04:56.574466" elapsed="37.106487"/>
 </kw>
-<kw name="When">
-<arg>User Searches for Product</arg>
-<status status="NOT RUN" start="2024-03-15T14:58:02.681043" elapsed="0.000000"/>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-03-17T11:05:34.888896" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-03-17T11:05:33.681953" elapsed="1.206943"/>
 </kw>
-<kw name="Then">
-<arg>User should be able to validate the product</arg>
-<status status="NOT RUN" start="2024-03-15T14:58:02.683128" elapsed="0.000000"/>
+<status status="PASS" start="2024-03-17T11:04:56.574466" elapsed="38.314430"/>
 </kw>
-<tag>TC_0010</tag>
-<status status="FAIL" start="2024-03-15T14:58:02.676823" elapsed="0.007303">No keyword with name 'Given' found.</status>
+<status status="PASS" start="2024-03-17T11:04:56.572472" elapsed="38.316424"/>
+</kw>
+<kw name="When User maximise the window" owner="SupportSteps_LandingPage">
+<kw name="maximize window" owner="LandingPage">
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-17T11:05:34.890890" elapsed="0.219419"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-03-17T11:05:35.636896" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-03-17T11:05:35.111303" elapsed="0.525593"/>
+</kw>
+<status status="PASS" start="2024-03-17T11:05:34.889901" elapsed="0.746995"/>
+</kw>
+<status status="PASS" start="2024-03-17T11:05:34.889901" elapsed="0.746995"/>
+</kw>
+<kw name="Then Validate that user should able to see the title of webpage" owner="SupportSteps_LandingPage">
+<kw name="Verify that user should able to see the title of webpage" owner="LandingPage">
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2024-03-17T11:05:36.246304" level="INFO">${Title} = Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in</msg>
+<var>${Title}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2024-03-17T11:05:35.638921" elapsed="0.607383"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${Title}</arg>
+<arg>${Title_text}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-03-17T11:05:36.247267" elapsed="0.000996"/>
+</kw>
+<msg time="2024-03-17T11:05:36.249260" level="INFO">${verify} = True</msg>
+<var>${verify}</var>
+<arg>should be equal</arg>
+<arg>${Title}</arg>
+<arg>${Title_text}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-03-17T11:05:36.246304" elapsed="0.002956"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${verify}'=='true'</arg>
+<arg>log</arg>
+<arg>${Title}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-17T11:05:36.249260" elapsed="0.001004"/>
+</kw>
+<status status="PASS" start="2024-03-17T11:05:35.638921" elapsed="0.611343"/>
+</kw>
+<status status="PASS" start="2024-03-17T11:05:35.637896" elapsed="0.612368"/>
+</kw>
+<tag>Amazon_reg</tag>
+<tag>package_1</tag>
+<tag>sprint_1</tag>
+<tag>TC_009</tag>
+<status status="PASS" start="2024-03-17T11:04:56.570478" elapsed="39.684763"/>
 </test>
-<status status="FAIL" start="2024-03-15T14:58:02.313032" elapsed="0.372144"/>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-03-17T11:05:36.259231" elapsed="10.220098"/>
+</kw>
+<doc>Validation of amazon landing page.</doc>
+<status status="PASS" start="2024-03-17T11:04:55.357723" elapsed="51.122594"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">TC_0010</stat>
+<stat pass="1" fail="0" skip="0">Amazon_reg</stat>
+<stat pass="1" fail="0" skip="0">package_1</stat>
+<stat pass="1" fail="0" skip="0">sprint_1</stat>
+<stat pass="1" fail="0" skip="0">TC_009</stat>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="TC 0010 ValidationOfProductTitle">TC 0010 ValidationOfProductTitle</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="TC 009 ValidationOfAmazonLandingPage">TC 009 ValidationOfAmazonLandingPage</stat>
 </suite>
 </statistics>
 <errors>
